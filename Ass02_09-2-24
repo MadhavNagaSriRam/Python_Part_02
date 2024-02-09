@@ -1,0 +1,9 @@
+n=input()
+d=n
+s=0
+for i in n:
+    s=s*10+int(i)
+if(d==n):
+    print("Palindrome")
+else:
+    print("Not Palindrome")
