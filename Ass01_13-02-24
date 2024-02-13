@@ -1,0 +1,38 @@
+class Solution:
+    def salary(self,empno,empname,designation,basic,hra,da,ta):
+        self.empno=empno
+        self.empname=empname
+        self.designation=designation
+        self.basic=basic
+        self.hra=hra
+        self.da=da
+        self.ta=ta
+    def getsalary(self):
+        netsalary=self.basic+self.da+self.hra+self.ta
+        print("Employee Number:",self.empno)
+        print("Employee Name",self.empname)
+        print("Designation:",self.designation)
+        print("Basic:",self.basic)
+        print("Hra:",hra)
+        print("Da",self.da)
+        print("Ta",self.ta)
+        print("Net Salary:",netsalary)
+        if netsalary>50000 :
+            print("Tax:",0.05*netsalary)
+        elif netsalary>35000 :
+            print("Tax:",0.03*netsalary)
+        elif netsalary>20000 :
+            print("Tax",0.01*netsalary)
+        else:
+            print("Tax:","Nil")
+    
+s=Solution()
+empno=int(input('Enter empno:'))
+empname=input('Enter empname')
+designation=input('Enter designation:')
+basic=int(input('Enter Basic'))
+hra=int(input('Enter Hra'))
+da=int(input('Enter da'))
+ta=int(input('Enter ta'))
+s.salary(empno,empname,designation,basic,hra,ta,da)
+s.getsalary()
